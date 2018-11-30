@@ -6,11 +6,19 @@ import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
+    for i,rows in enumerate(texts):
+        if i==1:
+            row=rows
+    print("First record of texts, "+row[0]+" texts "+row[1]+" at time "+row[2])
+              
 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
-
+ for i,rows in enumerate(calls):
+        if i==1:
+            row=rows
+    print("Last record of calls, "+row[0]+" calls "+row[1]+" at time "+row[2]+", lasting "+ row[3]+" seconds")
 
 """
 任务0:
